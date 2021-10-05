@@ -55,8 +55,8 @@ def runplt1(size=None):
 def runplt2(size=None):
     plt.figure(figsize=(8,5))
     plt.title(r'The Figure of $c/\Gamma-c$')
-    plt.xlabel(r'$c\ $\ mol$\cdot $L$^{-1}$')
-    plt.ylabel(r'$c/\Gamma \ $\ m$^{2}\cdot $L$^{-1}$')
+    plt.xlabel(r'$c\ $\ mol$\cdot $m$^{-3}$')
+    plt.ylabel(r'$c/\Gamma \ $\ m$^{-1}$')
     # plt.axis([0, 4.0, 0.03, 0.07])
     # plt.axis([])
     return plt
@@ -94,8 +94,9 @@ Z = gm*8.314*(273.15+20)
 print('Z为')
 print(Z)
 #Fig3
-c0 = c/gm
-A = np.polyfit(c,c0,1)
+c1 = c * 1000
+c0 = c1/gm
+A = np.polyfit(c1,c0,1)
 B = np.poly1d(A)
 print('Figure3的拟合函数：')
 print(B)
@@ -137,9 +138,9 @@ plt1.show()
 #Fig3
 plt2=runplt2()
 plt2.grid(zorder=0)
-c4= np.linspace(0.52,3.62,500)
-s4 = make_interp_spline(c,c0)(c4)
-plt2.plot(c4,s4,ls='--',c='orange',label=r'$c/\Gamma-c\ $ relationship:$c/\Gamma = 4.806\times 10^{4} c + 1.762\times 10^{5}$',zorder=2)
+c4= np.linspace(0.52*1000,3.62*1000,500)
+s4 = make_interp_spline(c1,c0)(c4)
+plt2.plot(c4,s4,ls='--',c='orange',label=r'$c/\Gamma-c\ $ relationship:$c/\Gamma = 4.806\times 10^{4} c + 1.762\times 10^{8}$',zorder=2)
 plt2.legend(loc='upper left')
 # plt2.text(1,260000, r'$\frac{1}{\Gamma_{\infty}}$', ha='right', va='bottom', fontsize=10)
 plt2.savefig('Figure3.pdf')
