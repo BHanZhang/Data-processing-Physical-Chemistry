@@ -18,6 +18,9 @@
 \newcommand{\kaiti}{\CJKfamily{kaiti}}%
 \usepackage{paralist}
 \everymath{\displaystyle}
+\usepackage{chngcntr}%图片编号的宏包
+\counterwithout{figure}{section}%取消图片按章节编号
+\counterwithin{figure}{section}%将equation环境重新编号，不按节编号
 %\usepackage{emoji}
 %\usepackage{ntheorem}
 %\setemojifont{Twemoji Mozilla} 
@@ -120,6 +123,12 @@
 \usepackage{tikz}
 \begin{document}
 	\maketitle
+	\section{}
+	\section{}
+	\section{}
+	\section{}
+	\section{}
+	
 	\section{实验六：原电池电动势的测定}
 	\begin{figure}[h]
 	\centering
@@ -127,23 +136,23 @@
 	\caption{利用四次多项式拟合得到的$E-T$曲线，其中横坐标为热力学温度$T$（单位：开尔文 K）,纵坐标为原电池$\ce{Zn}_{(\rm{s}})|\ce{ZnSO4}(0.1\rm{mol}/L)||\ce{CuSO4}(0.1\rm{mol/L})|\ce{Cu}_{(\rm{s})}$的电池电动势 $E$（单位：伏特 V）。多项式拟合结果为：\textcolor[rgb]{0.54,0.13,0.33}{$E(T) =1.18\times 10^{-7} T^{4} - 0.0001455 T^{3} + 0.06726 T^{2} - 13.82 T + 1066$}，公式中的 $E(T)$与$T$视作无量纲数，即：$E(T) = \dfrac{E(T)}{\ce{V}}$，$T = \dfrac{T}{\ce{K}}$，上式两边对温度$T$求一阶导数，$E(T)$恒压下为温度$T$的函数，得：\textcolor[rgb]{0.54,0.13,0.33}{$\pqty{\dfrac{\partial E}{\partial T}}_{p} = \dfrac{{\rm{d}}E(T)}{{\rm{d}}T} = 4.72\times 10^{-7} T^{3} - 0.0004364 T^{2} + 0.1345 T - 13.82$}。}
 	\label{fi1}
 \end{figure}
-\section{实验七：溶液表面张力的测定}
 \newpage
+\section{实验七：溶液表面张力的测定}
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.4]{Figure1}
+	\includegraphics[scale=0.8]{Figure1}
 	\caption{利用函数$\sigma = a + b \ln{(c + d)}$拟合得到的$\sigma - c$曲线。其中$a,b,d$均为参数，$c$为乙醇溶液的浓度（去除单位为：mol$\cdot$m$^{-1}$），$\sigma$为溶液表面张力（去除单位为：N$\cdot$m$^{-2}$）得到的拟合拟合结果为：\textcolor[rgb]{0.54,0.13,0.33}{$ \sigma= 0.13308212+0.0507109\ln{(c + 3.66669084)}$}，回归系数$R^{2} = 0.993$。}
 	\label{fi2}
 \end{figure}
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.4]{Figure2}
+	\includegraphics[scale=0.8]{Figure2}
 	\caption{利用$\sigma - c$的拟合结果求出$\varGamma - c$曲线。其中$\varGamma$是溶质在表面层的吸附量（去除单位为 mol$\cdot$ m$^{-2}$，纵坐标为$1\times 10^{-5}$mol$\cdot$ m$^{-2}$），计算公式为\textcolor[rgb]{0.07,0.36,0.57}{$\varGamma = \dfrac{c}{RT}\pqty{\dfrac{\rm{d}\sigma}{\rm{d}c}}_{T}$}，其中 $T$取实验温度$T = 293.15$K。}
 	\label{fi3}
 \end{figure}
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.4]{Figure3}
+	\includegraphics[scale=0.8]{Figure3}
 	\caption{$\dfrac{c}{\varGamma}-c$关系图，纵坐标为$\dfrac{c}{\varGamma}$（去单位为m$^{2}\cdot$L$^{-1}$）。利用一次拟合，得到一直线，关系式为\textcolor[rgb]{0.54,0.13,0.33}{$\dfrac{c}{\varGamma} = 4.806 \times 10^{4}c + 1.762 \times 10^{5}$}，应符合关系式\textcolor[rgb]{0.07,0.36,0.57}{$\dfrac{c}{\varGamma} = \dfrac{c}{\varGamma_{\infty}}+\dfrac{1}{K\varGamma_{\infty}}$}，故其斜率之倒数为$\varGamma_{\infty} = 2.081 \times10^{-5}$mol$\cdot$ m$^{-2}$}
 	\label{fi4}
 \end{figure}

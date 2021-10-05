@@ -35,16 +35,16 @@ def computeCorrelation(X, Y):
 
 print(matplotlib.matplotlib_fname())
 def runplt(size=None):
-    plt.figure(figsize=(14,9))
+    plt.figure(figsize=(8,5))
     plt.title(r'The Figure of $\sigma-c$')
     plt.xlabel(r'$c\ $\ mol$\cdot $L$^{-1}$')
     plt.ylabel(r'$\sigma\ $\ N$\cdot $m$^{-1}$')
-    plt.axis([0, 4.0,0.03, 0.07])
+    plt.axis([0, 4.5,0.03, 0.07])
     # plt.axis([])
     return plt
 
 def runplt1(size=None):
-    plt.figure(figsize=(14,9))
+    plt.figure(figsize=(8,5))
     plt.title(r'The Figure of $\Gamma-c$')
     plt.xlabel(r'$c\ $\ mol$\cdot $L$^{-1}$')
     plt.ylabel(r'$\Gamma\ $\ mol$\cdot $m$^{-2}$')
@@ -53,7 +53,7 @@ def runplt1(size=None):
     return plt
 
 def runplt2(size=None):
-    plt.figure(figsize=(14,9))
+    plt.figure(figsize=(8,5))
     plt.title(r'The Figure of $c/\Gamma-c$')
     plt.xlabel(r'$c\ $\ mol$\cdot $L$^{-1}$')
     plt.ylabel(r'$c/\Gamma \ $\ m$^{2}\cdot $L$^{-1}$')
@@ -114,7 +114,7 @@ s2 = make_interp_spline(c,r)(c2)
 plt.plot(c2,s2,ls='--',c='orange',label=r'Logarithmic Fitting:$\sigma = 0.13308212-0.0507109\ln{(c+3.66669084)}$',zorder=2)
 plt.legend(loc='upper right')
 for X, y in zip(c, s):
-    plt.text(X+0.03, y, (np.around(X,2),np.around(y,4)),ha='left', va='bottom', fontsize=10)
+    plt.text(X+0.06, y, (np.around(X,2),np.around(y,4)),ha='left', va='bottom', fontsize=10)
 plt.savefig('Figure1.pdf')
 plt.show()
 
@@ -127,8 +127,10 @@ s3 = make_interp_spline(c,gm)(c3)
 plt1.plot(c3,s3,ls='--',c='orange',label=r'$\Gamma-c\ $ relationship',zorder=2)
 # plt1.ticklabel_format(style='plain')
 plt1.legend(loc='upper left')
-for X, y in zip(c, gm):
-    plt1.text(X-0.02, y-0.0000001, (np.around(X,2),np.around(y,8)),ha='right', va='bottom', fontsize=10)
+for X, y in zip(c, gm[0:6]):
+    plt1.text(X+0.04, y-0.0000001, (np.around(X,2),np.around(y,8)),ha='left', va='bottom', fontsize=10)
+plt1.text(c[6]-0.04, gm[6]-0.0000002, (np.around(c[6],2),np.around(gm[6],8)),ha='right', va='bottom', fontsize=10)
+plt1.text(c[7]-0.04, gm[7]-0.00000005, (np.around(c[7],2),np.around(gm[7],8)),ha='right', va='bottom', fontsize=10)
 plt1.savefig('Figure2.pdf')
 plt1.show()
 
