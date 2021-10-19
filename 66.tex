@@ -8,6 +8,7 @@
 \geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
 \usepackage{amsmath}
 \usepackage{graphicx}
+\usepackage{multirow}
 \usepackage{subfiles}
 \linespread{1.314}
 %\usepackage{luatexja-fontspec}
@@ -138,6 +139,51 @@
 	\label{fi8}
 \end{figure}
 
+\newpage
+\begin{table}[h]
+		\centering
+		\begin{tabular}{p{3cm}<{\centering} p{3cm}<{\centering} p{3cm}<{\centering} p{3cm}<{\centering}}
+		\toprule
+		\multicolumn{2}{c}{蔗糖} &   \multicolumn{2}{c}{苯甲酸}   \\  
+		\midrule
+        时间$t$/s & 温差$\Delta\theta/^{\circ}$C & 时间$t$/s & 温差$\Delta\theta/^{\circ}$C \\  
+        \midrule
+        0 & 0.000 & 0 & 0.000 \\  
+        60 & 0.009 & 60 & 0.002 \\  
+        120 & 0.016 & 120 & 0.004 \\  
+        180 & 0.019 & 180 & 0.006 \\  
+        240 & 0.023 & 240 & 0.007 \\  
+        300 & 0.027 & 300 & 0.008 \\  
+        330 & 0.029 & 330 & 0.009 \\ 
+        \rowcolor{mypink} 
+        360 & 0.129 & 360 & 0.055 \\  
+        390 & 0.477 & 390 & 0.364 \\  
+        420 & 0.693 & 420 & 0.762 \\  
+        450 & 0.821 & 450 & 1.068 \\  
+        480 & 0.902 & 480 & 1.270 \\  
+        510 & 0.960 & 510 & 1.385 \\  
+        540 & 1.002 & 540 & 1.469 \\  
+        570 & 1.027 & 570 & 1.533 \\  
+        600 & 1.053 & 600 & 1.575 \\  
+        630 & 1.075 & 630 & 1.609 \\  
+        660 & 1.094 & 660 & 1.638 \\  
+        690 & 1.110 & 690 & 1.660 \\  
+        720 & 1.122 & 720 & 1.681 \\  
+        750 & 1.134 & 750 & 1.697 \\  
+        780 & 1.146 & 780 & 1.711 \\  
+        810 & 1.550 & 810 & 1.723 \\
+        \rowcolor{mycyan}  
+        840 & 1.163 & 840 & 1.725 \\  
+        870 & 1.172 & 870 & 1.733 \\  
+        900 & 1.178 & 900 & 1.740 \\  
+        930 & 1.185 & 930 & 1.746 \\  
+        960 & 1.191 & 960 & 1.751 \\  
+         & &990 & 1.756   \\  
+		\bottomrule
+		\end{tabular}	
+		\label{ta1}
+		\caption{实验数据（标有\textcolor{mypink}{粉色}，是点火；标有\textcolor{mycyan}{蓝色}，是结束反应）}
+\end{table}
 
 	\section{}
 	\section{}
