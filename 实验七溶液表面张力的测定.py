@@ -116,7 +116,7 @@ plt.plot(c2,s2,ls='--',c='orange',label=r'Logarithmic Fitting:$\sigma = 0.133082
 plt.legend(loc='upper right')
 for X, y in zip(c, s):
     plt.text(X+0.06, y, (np.around(X,2),np.around(y,4)),ha='left', va='bottom', fontsize=10)
-plt.savefig('Figure1.pdf')
+plt.savefig('Figure1.pdf',bbox_inches='tight')
 plt.show()
 
 #Fig2
@@ -132,7 +132,7 @@ for X, y in zip(c, gm[0:6]):
     plt1.text(X+0.04, y-0.0000001, (np.around(X,2),np.around(y,8)),ha='left', va='bottom', fontsize=10)
 plt1.text(c[6]-0.04, gm[6]-0.0000002, (np.around(c[6],2),np.around(gm[6],8)),ha='right', va='bottom', fontsize=10)
 plt1.text(c[7]-0.04, gm[7]-0.00000005, (np.around(c[7],2),np.around(gm[7],8)),ha='right', va='bottom', fontsize=10)
-plt1.savefig('Figure2.pdf')
+plt1.savefig('Figure2.pdf',bbox_inches='tight')
 plt1.show()
 
 #Fig3
@@ -143,6 +143,6 @@ s4 = make_interp_spline(c1,c0)(c4)
 plt2.plot(c4,s4,ls='--',c='orange',label=r'$c/\Gamma-c\ $ relationship:$c/\Gamma = 4.806\times 10^{4} c + 1.762\times 10^{8}$',zorder=2)
 plt2.legend(loc='upper left')
 # plt2.text(1,260000, r'$\frac{1}{\Gamma_{\infty}}$', ha='right', va='bottom', fontsize=10)
-plt2.savefig('Figure3.pdf')
+plt2.savefig('Figure3.pdf',bbox_inches='tight')
 plt2.show()
 

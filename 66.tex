@@ -5,17 +5,18 @@
 \usepackage{geometry}
 \usepackage{amsthm,amsmath,amssymb}
 \usepackage{mathrsfs}
-\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\geometry{left=0.8cm,right=0.8cm,top=2.5cm,bottom=2.5cm}
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{multirow}
 \usepackage{subfiles}
 \linespread{1.314}
-%\usepackage{luatexja-fontspec}
-\setCJKmainfont[ItalicFont=FandolKai-Regular,BoldFont=STSongti-SC-Black]{SimSun} 
 \usepackage{physics}
 \usepackage{graphicx}
 \usepackage{arydshln}
+\setCJKmainfont[ItalicFont=FandolKai-Regular,BoldFont=STSongti-SC-Black]{STSong} 
+\setCJKsansfont{FandolHei-Regular}
+\setCJKmonofont{FandolFang-Regular}
 \setCJKfamilyfont{kaiti}{FandolKai-Regular}
 \newcommand{\kaiti}{\CJKfamily{kaiti}}%
 \usepackage{paralist}
@@ -188,6 +189,7 @@
 \newpage
 	\section{实验二：蔗糖水解}
 	
+
 	\begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.5]{ffigg}
@@ -216,11 +218,43 @@
 \end{table}
 }
 
-	
+	\newpage
+	\section{实验三：饱和蒸气压的测定}
+	\begin{table}[h]
+		\centering
+		\begin{tabular}{p{1cm}<{\centering} p{2.5cm}<{\centering} p{2.5cm}<{\centering} p{2.5cm}<{\centering} p{2.5cm}<{\centering} p{2.5cm}<{\centering}}
+		\toprule
+		序号 & 真空度$/\rm{Pa}$ & $T/\rm{K}$ & 蒸气压$p$$/\rm{Pa}$ & $\dfrac{1}{T}$$/\rm{K}^{-1}$ &$\ln{p}$$/\rm{Pa}$ \\ 
+		\midrule
+       1 & -94250.00 & 298.15 & 8580.00 & 0.0033540 & 9.06 \\ 
+        2 & -91590.00 & 303.15 & 11240.00 & 0.0032987 & 9.33 \\ 
+        3 & -88950.00 & 307.15 & 13880.00 & 0.0032557 & 9.54 \\ 
+        4 & -85350.00 & 311.15 & 17480.00 & 0.0032139 & 9.77 \\ 
+        5 & -83340.00 & 313.15 & 19490.00 & 0.0031934 & 9.88 \\ 
+        6 & -81810.00 & 315.15 & 21020.00 & 0.0031731 & 9.95 \\ 
+        7 & -77230.00 & 318.15 & 25600.00 & 0.0031432 & 10.15 \\ 		\bottomrule
+		\end{tabular}	
+		\label{ta1}
+		\caption{实验数据计算整理}
+\end{table}
+\newpage
+	\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.6]{饱和蒸气压1}
+	\caption{饱和蒸气压$p$（去单位为帕斯卡Pa）与热力学温度$K$（去单位为开尔文K）的关系图，指数函数拟合，得到的关系式为\textcolor[rgb]{0.54,0.13,0.33}{$p = 2125.35 + 10^{\dfrac{-2628.00}{T} +  \displaystyle 12.63}$}。}
+	\label{fi3}
+	\centering
+	\includegraphics[scale=0.6]{饱和蒸气压2}
+	\caption{饱和蒸气压的自然对数$\ln{p}$（去单位为帕斯卡Pa）与热力学温度之倒数$\dfrac{1}{T}$（去单位为开尔文的倒数K$^{-1}$）的关系图。线性拟合得到的方程为\textcolor[rgb]{0.54,0.13,0.33}{$\ln{p} = \dfrac{-5137}{T}+ 26.28$}应满足方程\textcolor[rgb]{0.07,0.36,0.57}{$\ln{p} = -\dfrac{\Delta_{\rm{vap}}H_{\rm{m}}}{RT} + Constant$}，斜率为\textcolor[rgb]{0.07,0.36,0.57}{$-\dfrac{\Delta_{\rm{vap}}H_{\rm{m}}}{R} = -5137$}，解得\textcolor[rgb]{0.54,0.13,0.33}{$\Delta_{\rm{vap}}H_{\rm{m}} = 42709\rm{J}\cdot\rm{mol}^{-1}$}。}
+	\label{fi4}
+\end{figure}
+
+
+\newpage
 	\section{}
+	\newpage
 	\section{}
-	\section{}
-	
+	\newpage
 	\section{实验六：原电池电动势的测定}
 	\begin{figure}[h]
 	\centering
@@ -258,6 +292,105 @@
 	\caption{$\dfrac{c\varLambda_{m}}{c^{\ominus}} $（去单位为$\rm{S}\cdot\rm{m}^{2}\cdot\rm{mol}^{-1}$）对$ \dfrac{1}{\varLambda_{m}}$（去单位为$\rm{mol}\cdot\rm{S}^{-1}\cdot\rm{m}^{-2}$）作图，得到的方程为\textcolor[rgb]{0.54,0.13,0.33}{$\dfrac{c\varLambda_{m}}{c^{\ominus}} =2.657\times 10^{-8} \dfrac{1}{\varLambda_{m}}- 1.867\times 10^{-6}$}，用斜率除以$\varLambda_{m,\infty}^{2}$，就得到\textcolor[rgb]{0.54,0.13,0.33}{$K_{c}^{\ominus} = 1.741\times 10^{-5}$}。}
 	\label{fi5}
 \end{figure}
+\newpage
+\section{实验九：二元相图}
 
 
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.55]{相图}
+	\caption{乙醇-环己烷汽-液平衡相图，左侧两条曲线为本组测量所得，使用五次多项式拟合，其交点坐标通过解方程得到为\textcolor[rgb]{0.54,0.13,0.33}{(0.566,337.72K)}；右侧为邻组数据，汽相采用五次多项式拟合，液相采用二次多项式拟合，其交点通过解方程得到为\textcolor[rgb]{0.54,0.13,0.33}{(0.541,337.42K)}，求平均值，得到乙醇与环己烷二组分的最低沸点为\textcolor[rgb]{0.54,0.13,0.33}{337.57K}}
+	\label{fi5}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{相图}
+	\caption{乙醇-环己烷汽-液平衡相图，左侧两条曲线为本组测量所得，使用五次多项式拟合，其交点坐标通过解方程得到为\textcolor[rgb]{0.54,0.13,0.33}{(0.566,337.72K)}；右侧为邻组数据，汽相采用五次多项式拟合，液相采用二次多项式拟合，其交点通过解方程得到为\textcolor[rgb]{0.54,0.13,0.33}{(0.541,337.42K)}，求平均值，得到乙醇与环己烷二组分的最低沸点为\textcolor[rgb]{0.54,0.13,0.33}{337.57K}}
+	\label{fi5}
+\end{figure}
+\begin{table}[h]
+		\centering
+		\begin{tabular}{cccccccc}
+		\toprule
+         序号 & $T$/K & $n_{\rm{D}}^{30}(\text{测})$ & $n_{\rm{D}}^{30}(\text{真})$ & $x_{\text{环己烷}}(\rm{l})$ & $n_{\rm{D}}^{30}(\text{测})$ & $n_{\rm{D}}^{30}(\text{真})$ & $x_{\text{环己烷}}(\rm{g})$  \\  
+        \midrule
+        1 & 351.15 & 1.358 & 1.357 & 0.000 & 1.358 & 1.357 & 0.000 \\ 
+        2 & 349.19 & 1.3596 & 1.3586 & 0.018 & 1.3646 & 1.3636 & 0.076 \\ 
+        3 & 347.36 & 1.3611 & 1.3601 & 0.036 & 1.3708 & 1.3698 & 0.146 \\ 
+        4 & 345.45 & 1.3624 & 1.3614 & 0.051 & 1.382 & 1.381 & 0.287 \\ 
+        5 & 344.33 & 1.3648 & 1.3638 & 0.078 & 1.3838 & 1.3828 & 0.312 \\ 
+        6 & 343.25 & 1.3661 & 1.3651 & 0.093 & 1.3861 & 1.3851 & 0.344 \\ 
+        7 & 341.90 & 1.3681 & 1.3671 & 0.116 & 1.3895 & 1.3885 & 0.395 \\ 
+        8 & 340.87 & 1.3699 & 1.3689 & 0.136 & 1.3931 & 1.3921 & 0.451 \\ 
+        9 & 339.92 & 1.3713 & 1.3703 & 0.152 & 1.3938 & 1.3928 & 0.463 \\ 
+        10 & 338.80 & 1.3782 & 1.3772 & 0.238 & 1.3954 & 1.3944 & 0.489 \\ 
+        11 & 338.37 & 1.3799 & 1.3789 & 0.259 & 1.3956 & 1.3946 & 0.492 \\ 
+        12 & 337.95 & 1.3872 & 1.3862 & 0.359 & 1.3973 & 1.3963 & 0.520 \\ 
+        13 & 337.75 & 1.3915 & 1.3905 & 0.424 & 1.3976 & 1.3966 & 0.524 \\ 
+        14 & 337.68 & 1.3975 & 1.3965 & 0.524 & 1.399 & 1.398 & 0.550 \\ 
+        15 & 337.65 & 1.3988 & 1.3978 & 0.546 & 1.3994 & 1.3984 & 0.557 \\ 
+        16 & 338.25 & 1.4081 & 1.4063 & 0.702 & 1.3992 & 1.3974 & 0.539 \\ 
+        17 & 340.19 & 1.4096 & 1.4078 & 0.732 & 1.4007 & 1.3989 & 0.565 \\ 
+        18 & 341.27 & 1.4112 & 1.4094 & 0.765 & 1.4021 & 1.4003 & 0.590 \\ 
+        19 & 344.36 & 1.4129 & 1.4111 & 0.799 & 1.4049 & 1.4031 & 0.623 \\ 
+        20 & 347.19 & 1.4153 & 1.4135 & 0.851 & 1.4105 & 1.4087 & 0.751 \\ 
+        21 & 348.44 & 1.4192 & 1.4174 & 0.937 & 1.4137 & 1.4119 & 0.816 \\ 
+        22 & 350.16 & 1.4196 & 1.4178 & 0.946 & 1.4162 & 1.4144 & 0.870 \\ 
+        23 & 351.75 & 1.42 & 1.4182 & 0.955 & 1.42 & 1.4182 & 0.955 \\ 
+        24 & 353.60 & 1.422 & 1.4202 & 1.000 & 1.422 & 1.4202 & 1.000 \\  		\bottomrule
+		\end{tabular}	
+		\label{ta1}
+		\caption{实验数据处理}
+\end{table}
+
+\newpage\section{实验十：皂化反应}
+\setlength{\tabcolsep}{0.2mm}{
+\begin{table}[h]
+		\centering
+		\begin{tabular}{cccccccccccccccc}
+		\toprule
+		\multicolumn{8}{c}{$c_{0} = 0.04976 \ \rm{mol}\cdot\rm{L}^{-1}$} &\multicolumn{8}{c}{$\kappa_{0} = 1.036 \ \rm{S}\cdot\rm{m}^{-1}$} \\  
+        \midrule
+          $t \ /\rm{min}$&1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15   \\ 
+         \midrule
+       $\kappa_{t}\ /\rm{S}\cdot\rm{m}^{-1}$ & 0.896 & 0.795 & 0.729 & 0.680 & 0.645 & 0.617 & 0.594 & 0.576 & 0.561 & 0.548 & 0.537 & 0.527 & 0.518 & 0.511 & 0.504 \\ 
+        $(\kappa_{0} - \kappa_{t})\ /\rm{S}\cdot\rm{m}^{-1}$ & 0.140 & 0.241 & 0.307 & 0.356 & 0.391 & 0.419 & 0.442 & 0.460 & 0.475 & 0.488 & 0.499 & 0.509 & 0.518 & 0.525 & 0.532 \\ 
+         $\dfrac{(\kappa_{0} - \kappa_{t})}{t} \ /\rm{S}\cdot\rm{m}^{-1}\cdot\rm{min}^{-1}$ & 0.140 & 0.120 & 0.102 & 0.0890 & 0.0782 & 0.0698 & 0.0631 & 0.0575 & 0.0528 & 0.0488 & 0.0454 & 0.0424 & 0.0398 & 0.0375 & 0.0355 \\  
+		\bottomrule
+		\end{tabular}	
+		\label{ta1}
+		\caption{$25^{\circ}$C时皂化反应电导率随时间的变化关系(数据处理)}
+\end{table}}
+
+\setlength{\tabcolsep}{0.2mm}{
+\begin{table}[h]
+		\centering
+		\begin{tabular}{cccccccccccccccc}
+		\toprule
+		\multicolumn{8}{c}{$c_{0} = 0.04976 \ \rm{mol}\cdot\rm{L}^{-1}$} &\multicolumn{8}{c}{$\kappa_{0} = 1.139 \ \rm{S}\cdot\rm{m}^{-1}$} \\  
+        \midrule
+          $t \ /\rm{min}$&1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15   \\ 
+         \midrule
+    $\kappa_{t}\ /\rm{S}\cdot\rm{m}^{-1}$ & 0.924 & 0.810 & 0.740 & 0.692 & 0.657 & 0.630 & 0.610 & 0.593 & 0.579 & 0.567 & 0.557 & 0.548 & 0.541 & 0.534 & 0.528 \\ 
+        $(\kappa_{0} - \kappa_{t})\ /\rm{S}\cdot\rm{m}^{-1}$ & 0.215 & 0.329 & 0.399 & 0.447 & 0.482 & 0.509 & 0.529 & 0.546 & 0.560 & 0.572 & 0.582 & 0.591 & 0.598 & 0.605 & 0.611 \\ 
+        $\dfrac{(\kappa_{0} - \kappa_{t})}{t} \ /\rm{S}\cdot\rm{m}^{-1}\cdot\rm{min}^{-1}$ &0.215 & 0.165 & 0.133 & 0.112 & 0.0964 & 0.0848 & 0.0756 & 0.0683 & 0.0622 & 0.0572 & 0.0529 & 0.0492 & 0.0460 & 0.0432 & 0.0407 \\ 
+		\bottomrule
+		\end{tabular}	
+		\label{ta1}
+		\caption{$30^{\circ}$C时皂化反应电导率随时间的变化关系(数据处理)}
+\end{table}}
+\newpage
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.6]{速率常数1}
+	\caption{$25^{\circ}$C时皂化反应进行情况，横坐标为$\displaystyle\frac{\kappa_{0} - \kappa_{t}}{t}$(去单位为$\rm{S}\cdot\rm{m}^{-1}\cdot\rm{min}^{-1}$)，纵坐标为$\kappa_{t}$( 去单位为$\rm{S}\cdot\rm{m}^{-1}$)。线性拟合方程为\textcolor[rgb]{0.54,0.13,0.33}{$\kappa_{t} = 3.583 \displaystyle\frac{\kappa_{0} - \kappa_{t}}{t} + 0.3716$}}
+	\label{fi3}
+\vspace*{20pt}
+	\centering
+	\includegraphics[scale=0.6]{速率常数2}
+	\caption{$30^{\circ}$C时皂化反应进行情况，横坐标为$\displaystyle\frac{\kappa_{0} - \kappa_{t}}{t}$(去单位为$\rm{S}\cdot\rm{m}^{-1}\cdot\rm{min}^{-1}$)，纵坐标为$\kappa_{t}$( 去单位为$\rm{S}\cdot\rm{m}^{-1}$)。线性拟合方程为\textcolor[rgb]{0.54,0.13,0.33}{$\kappa_{t} = 2.271 \displaystyle\frac{\kappa_{0} - \kappa_{t}}{t} + 0.4371$}}
+	\label{fi3}
+\end{figure}
 \end{document}

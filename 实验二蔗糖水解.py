@@ -77,5 +77,5 @@ plt.plot(np.arange(0,95,1),B(np.arange(0,95,1)),ls='--',c='orange',label=r'$Afte
 for X, y in zip(t, a2):
     plt.text(X+1, y, (X,np.around(y,2)),ha='left', va='bottom', fontsize=6)
 plt.legend(loc='upper right')
-plt.savefig('ffigg.pdf')
+plt.savefig('ffigg.pdf',bbox_inches='tight')
 plt.show()
